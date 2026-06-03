@@ -1,0 +1,14 @@
+void insertClass(ClassNode** root, char* name)
+{
+    if (*root == NULL)
+    {
+        *root = createClass(name);
+        return;
+    }
+
+    if (strcmp(name, (*root)->className) < 0)
+        insertClass(&((*root)->left), name);
+
+    else
+        insertClass(&((*root)->right), name);
+}

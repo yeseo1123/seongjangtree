@@ -1,0 +1,19 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
+#define NAME_LEN 50
+
+typedef struct Student {
+    int id;                 // 학번
+    char name[NAME_LEN];    // 이름
+
+    int korean;
+    int english;
+    int math;
+
+    float average;
+
+    struct Student* next;
+} Student;
+
+#endif

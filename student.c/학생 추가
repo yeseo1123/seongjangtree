@@ -1,0 +1,10 @@
+void addStudent(
+    ClassNode* classNode,
+    Student* student)
+{
+    student->next =
+        classNode->students;
+
+    classNode->students =
+        student;
+}

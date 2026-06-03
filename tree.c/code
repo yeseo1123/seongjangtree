@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "tree.h"
+
+ClassNode* createClass(char* name)
+{
+    ClassNode* node =
+        (ClassNode*)malloc(sizeof(ClassNode));
+
+    strcpy(node->className, name);
+
+    node->students = NULL;
+
+    node->left = NULL;
+    node->right = NULL;
+
+    return node;
+}

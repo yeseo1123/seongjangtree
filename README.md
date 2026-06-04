@@ -64,8 +64,6 @@ project/
 ## 실행 방법
 gcc main.c src/student.c src/tree.c src/hashmap.c src/menu.c -I include -o seongjangtree
 
-./project
-
 ## 실행 화면 예시
 SeongJangTree
 

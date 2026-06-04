@@ -30,33 +30,7 @@
 - LinkedList(연결리스트) : 각 Class에 소속된 학생 정보를 저장하기 위해 사용했다.
 
 ## 프로젝트 구조
-project/
-
-├── main.c
-
-├── src/
-│   ├── student.c
-│   ├── tree.c
-│   ├── hashmap.c
-│   └── menu.c
-
-├── include/
-│   ├── student.h
-│   ├── tree.h
-│   ├── hashmap.h
-│   └── menu.h
-
-├── docs/
-│   ├── ProjectProposal.hwp
-│   ├── AlgorithmDesign.hwp
-│   └── FinalReport.hwp
-
-├── data/
-│   └── sample_students.txt
-
-├── README.md
-
-└── .gitignore
+project/ │ ├── main.c │ ├── src/ │ ├── student.c │ ├── tree.c │ ├── hashmap.c │ └── menu.c │ ├── include/ │ ├── student.h │ ├── tree.h │ ├── hashmap.h │ └── menu.h │ ├── docs/ │ ├── ProjectProposal.hwp │ ├── AlgorithmDesign.hwp │ └── FinalReport.hwp │ ├── data/ │ └── sample_students.txt │ ├── README.md │ └── .gitignore
 
 ## 실행 방법
 gcc main.c src/student.c src/tree.c src/hashmap.c src/menu.c -I include -o seongjangtree

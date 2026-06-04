@@ -61,6 +61,8 @@ project/
 ## 실행 방법
 gcc main.c src/student.c src/tree.c src/hashmap.c src/menu.c -I include -o seongjangtree
 
+./project
+
 ## 실행 화면 예시
 SeongJangTree
 
@@ -89,4 +91,3 @@ SeongJangTree
 - Tree, HashMap, LinkedList를 실제 프로그램에 적용하는 경험을 할 수 있었다.
 - 자료 구조 특성에 따라 탐색 속도와 데이터 관리 방식이 달리진다는 것을 체감할 수 있었다.
 - 이론으로 학습한 내용을 적용하면서 자료구조에 대한 이해를 높일 수 있었다.
-

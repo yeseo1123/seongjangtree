@@ -49,9 +49,9 @@ project/
 │   └── menu.h
 │
 ├── docs/
-│   ├── ProjectProposal.hwp
-│   ├── AlgorithmDesign.hwp
-│   └── FinalReport.hwp
+│   ├── 자료구조팀프로젝트제안서 원종찬 주예서.hwp
+│   ├── 자료구조팀프로젝트보고서 원종찬 주예서.hwp
+│   └── 자료구조팀프로젝트발표자료 원종찬 주예서.ppt
 │
 ├── data/
 │   └── sample_students.txt

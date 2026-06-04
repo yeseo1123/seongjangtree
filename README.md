@@ -5,7 +5,7 @@
 
 ## 개발 환경
 - Language : C
-- IDE : Visual Studion Code
+- IDE : Visual Studio Code
 - OS : Windows
 
 ## 팀원 소개

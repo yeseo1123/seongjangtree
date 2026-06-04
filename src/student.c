@@ -1,51 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#include "hashmap.h"
+#include "student.h"
 
-HashNode* hashTable[TABLE_SIZE] = { NULL };
-
-int hashFunction(int key)
+Student* createStudent(
+    int id,
+    char* name,
+    int kor,
+    int eng,
+    int math)
 {
-    return key % TABLE_SIZE;
-}
+    Student* student =
+        (Student*)malloc(sizeof(Student));
 
-void insertHash(Student* student)
-{
-    int index = hashFunction(student->id);
-
-    HashNode* newNode =
-        (HashNode*)malloc(sizeof(HashNode));
-
-    if (newNode == NULL)
+    if (student == NULL)
     {
         printf("메모리 할당 실패\n");
+        return NULL;
+    }
+
+    student->id = id;
+
+    strcpy(student->name, name);
+
+    student->korean = kor;
+    student->english = eng;
+    student->math = math;
+
+    student->average =
+        (kor + eng + math) / 3.0f;
+
+    student->next = NULL;
+
+    return student;
+}
+
+void printStudent(
+    Student* student)
+{
+    if (student == NULL)
+    {
+        printf("학생 정보가 없습니다.\n");
         return;
     }
 
-    newNode->key = student->id;
-    newNode->student = student;
+    printf("\n학생 정보\n");
 
-    newNode->next = hashTable[index];
-    hashTable[index] = newNode;
-}
+    printf("학번 : %d\n",
+        student->id);
 
-Student* searchHash(int id)
-{
-    int index = hashFunction(id);
+    printf("이름 : %s\n",
+        student->name);
 
-    HashNode* current =
-        hashTable[index];
+    printf("국어 : %d\n",
+        student->korean);
 
-    while (current != NULL)
-    {
-        if (current->key == id)
-        {
-            return current->student;
-        }
+    printf("영어 : %d\n",
+        student->english);
 
-        current = current->next;
-    }
+    printf("수학 : %d\n",
+        student->math);
 
-    return NULL;
+    printf("평균 : %.2f\n",
+        student->average);
 }

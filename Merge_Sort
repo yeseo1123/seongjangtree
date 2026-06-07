@@ -1,5 +1,3 @@
-int sorted[100];
-
 void merge(int a[], int left, int mid, int right)
 {
     int i = left, j = mid + 1, k = left, l;

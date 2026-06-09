@@ -26,4 +26,7 @@ Student* createStudent(
 void printStudent(
     Student* student);
 
+void updateStudentGrades(
+    Student* student, int kor, int eng, int math);
+
 #endif

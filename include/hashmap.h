@@ -3,20 +3,17 @@
 
 #include "student.h"
 
-#define TABLE_SIZE 100
+#define TABLE_SIZE 10
 
 typedef struct HashNode {
     int key;
-    Student* student;
+    Student student;
     struct HashNode* next;
 } HashNode;
 
-extern HashNode* hashTable[TABLE_SIZE];
-
-int hashFunction(int key);
-
-void insertHash(Student* student);
-
+void insertHash(Student student);
 Student* searchHash(int id);
+int deleteHash(int id);
+void printTable(void);
 
 #endif

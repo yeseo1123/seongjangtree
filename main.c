@@ -67,7 +67,31 @@ int main()
 
         case 3:
         {
-            printf("성적 수정 기능은 추후 구현\n");
+            int id;
+            int kor, eng, math;
+
+            printf("수정할 학번 : ");
+            scanf("%d", &id);
+
+            Student* student = searchHash(id);
+
+            if (student == NULL)
+            {
+                printf("학생 정보가 없습니다.\n");
+                break;
+            }
+
+            printf("국어 : ");
+            scanf("%d", &kor);
+
+            printf("영어 : ");
+            scanf("%d", &eng);
+
+            printf("수학 : ");
+            scanf("%d", &math);
+
+            updateStudentGrades(student, kor, eng, math);
+
             break;
         }
 

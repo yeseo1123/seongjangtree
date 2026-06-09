@@ -36,6 +36,26 @@ Student* createStudent(
     return student;
 }
 
+void updateStudentGrades(Student* student, int kor, int eng, int math)
+{
+    if (student == NULL)
+    {
+        printf("학생 정보가 없습니다.\n");
+        return;
+    }
+
+    student->korean = kor;
+    student->english = eng;
+    student->math = math;
+    student->average = (kor + eng + math) / 3.0f;
+
+    printf("성적이 수정되었습니다.\n");
+    printf("국어 : %d\n", student->korean);
+    printf("영어 : %d\n", student->english);
+    printf("수학 : %d\n", student->math);
+    printf("평균 : %.2f\n", student->average);
+}
+
 void printStudent(
     Student* student)
 {

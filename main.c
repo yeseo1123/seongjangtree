@@ -1,4 +1,5 @@
 #include <stdio.h>
+#pragma warning(disable:4996)
 
 #include "student.h"
 #include "tree.h"
@@ -16,7 +17,6 @@ int main()
     while (1)
     {
         showMenu();
-
         scanf("%d", &choice);
 
         switch (choice)
@@ -42,16 +42,10 @@ int main()
             printf("수학 : ");
             scanf("%d", &math);
 
-            Student* student =
-                createStudent(
-                    id,
-                    name,
-                    kor,
-                    eng,
-                    math);
+            Student* student = createStudent(id, name, kor, eng, math);
 
             addStudent(root, student);
-            insertHash(student);
+            insertHash(*student);
 
             printf("학생 등록 완료\n");
             break;
@@ -64,8 +58,7 @@ int main()
             printf("검색할 학번 : ");
             scanf("%d", &id);
 
-            Student* student =
-                searchHash(id);
+            Student* student = searchHash(id);
 
             printStudent(student);
 
@@ -80,9 +73,7 @@ int main()
 
         case 4:
         {
-            printf("반 평균 : %.2f\n",
-                calculateClassAverage(root));
-
+            printf("반 평균 : %.2f\n", calculateClassAverage(root));
             break;
         }
 
@@ -107,6 +98,7 @@ int main()
         default:
         {
             printf("잘못된 입력입니다.\n");
+            break;
         }
         }
     }

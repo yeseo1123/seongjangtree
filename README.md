@@ -34,9 +34,8 @@
 ```text
 project/
 │
-├── main.c
-│
 ├── src/
+│   ├── main.c
 │   ├── student.c
 │   ├── tree.c
 │   ├── hashmap.c

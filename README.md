@@ -79,6 +79,9 @@ SeongJangTree
 
 선택 : 
 
+## 실제 시연 영상
+https://youtu.be/xxcDnIBcTks
+
 ## 기대 효과
 - 학생 정보의 효율적인 관리 및 정비
 - 학번 기반의 빠른 검색 지원
